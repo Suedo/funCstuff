@@ -7,7 +7,7 @@
 #include<stdio.h>
 void strreplace(char s[],char,char);
 char readChar(void);
-int main()
+int main(void)
 {
     char s[10],chr,repl_chr;
 	char temp [10];
