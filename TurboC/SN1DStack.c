@@ -16,9 +16,7 @@ void push(int *stack  , int* top){
 int pop(int *stack , int* top){ 
 	int temp;
 	(*top)--;
-	temp = stack[*top];
-	return temp;
-
+	return stack[*top];
 }
 
 void display(int *stack , int* top){

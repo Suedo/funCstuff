@@ -1,24 +1,26 @@
 /*
  Simple Calclulator
 */
+#include<stdio.h>
 
 void calc(char c){
 	float num1,num2,ans;
+	char sign;
 	printf("enter num1 : "); scanf("%g",&num1);
 	printf("enter num2 : "); scanf("%g",&num2);
 	switch(c){
-		case '+' : ans = num1 + num2; break;
-		case '-' : ans = num1 - num2; break;
-		case '*' : ans = num1 * num2; break;
-		case '/' : ans = num1 / num2; break;
+		case 'a' : ans = num1 + num2;  sign = '+'; break;
+		case 's' : ans = num1 - num2;  sign = '-'; break;
+		case 'm' : ans = num1 * num2;  sign = '*'; break;
+		case 'd' : ans = num1 / num2;  sign = '/'; break;
 
 	}
-	printf("%g %c %g = %g \n",num1,c,num2,ans);
+	printf("%g %c %g = %g \n",num1,sign,num2,ans);
 	while(getchar()!='\n'){} // cleanup stdin from junk left by scanf
 }
 
 int main(void){
-	char c; clrscr();
+	char c;
 	printf("Simple Calculator Program.\nPress : a(add), s(sub), m(mul) , d(div) , q(quit)\n**********************************************************\n\n");
 
 	while((c=getchar())!='q'){
